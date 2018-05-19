@@ -85,8 +85,9 @@ h3{
 }
 
 .pipe, .pipeBot{
-    /* background:url("tex.png"); */
-    background-color: red;
+    background:url("tex.png");
+    /* background-color: rgba(0, 255, 100); */
+    opacity: 0.90;
 }
 
 .score{

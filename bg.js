@@ -6,8 +6,8 @@ function Bg (){
     this.x = this.w
     // this.speed = vMin/280 ;
 
-    this.speed = 1;
-    this.currentPos = 0;
+    this.speed = 0.3;
+    this.currPos = 0;
 
     this.bgImg = "bg.png" 
 
@@ -18,7 +18,7 @@ function Bg (){
 
     this.update = function(){
         // this.x -= this.speed 
-        this.currentPos -= this.speed 
+        this.currPos -= this.speed 
     }
 
     this.createImg = function(className){

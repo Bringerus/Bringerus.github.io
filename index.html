@@ -74,7 +74,6 @@
 
         window.addEventListener("beforeunload", function (EO) {
             var confirmationMessage = "\o/";
-
             (EO || window.event).returnValue = confirmationMessage; 
             return confirmationMessage;                            
         });
@@ -92,25 +91,25 @@
             function (callback) { window.setTimeout(callback, 1000 / 60); };
 
 
-        // FPS тест
-        var fps = {
-            lastAnimationFrameTime: 0,
-            fpsElement: document.getElementById('fps'),
-            animate: function (now) {
-                fps.calculateFps(now);
-                RAF(fps.animate)
-            },
-            calculateFps: function (now) {
-                var fps = 1000 / (now - this.lastAnimationFrameTime);
-                this.lastAnimationFrameTime = now;
-                this.fpsElement.innerHTML = fps.toFixed(0) + ' fps';
-            },
-            start: function () {
-                RAF(fps.animate);
-            }
-        };
+        // // FPS тест
+        // var fps = {
+        //     lastAnimationFrameTime: 0,
+        //     fpsElement: document.getElementById('fps'),
+        //     animate: function (now) {
+        //         fps.calculateFps(now);
+        //         RAF(fps.animate)
+        //     },
+        //     calculateFps: function (now) {
+        //         var fps = 1000 / (now - this.lastAnimationFrameTime);
+        //         this.lastAnimationFrameTime = now;
+        //         this.fpsElement.innerHTML = fps.toFixed(0) + ' fps';
+        //     },
+        //     start: function () {
+        //         RAF(fps.animate);
+        //     }
+        // };
 
-        fps.start();
+        // fps.start();
 
         var mainField = document.getElementById("mainField");
 
@@ -235,6 +234,7 @@
             newNewUi.setCurrentObj(uiRestart); // Restart !!!!    
         })();
 
+
         (function startMainMenu(){
             addClicEventListner(clickEventsList); 
             uiNew.goTo(-50, (130+50)/60 );
@@ -245,7 +245,6 @@
         function gameMenuSetDifficulty(){
             uiNew.goTo(-230, uiAnimSpeed);
             uiDiffBoard.goTo(-50, uiAnimSpeed);
-            console.log("я сработала")
         }
 
         function goBackToMenuDiff(){
@@ -398,9 +397,10 @@
                 }
             }
 
-            uiNew.update();
+            uiNew.update(bgArr[0]);
 
             for (var i = bgArr.length - 1; i >= 0; i--) {
+                console.log(bgArr[0].x)
 
                 bgArr[i].x = getElementPos(bgDiv[i]).left
                 bgArr[i].update();
@@ -432,6 +432,7 @@
                 pipeDivBot[i].style.transform ="translateZ(0) translateX(" + pipes[i].currPos + "%)";
 
                 if (pipes[i].hits(bird)) {
+                    vibro(true);
                     bgAudio.pause();
                     bgAudio.currentTime=0
                     clickSound();
@@ -597,20 +598,8 @@
             };
         }
 
-    // window.onbeforeunload = function (EO) { 
-    //     var EO = EO || window.event; 
-    //     var myMessage= "Вы действительно хотите покинуть страницу, не сохранив данные?"; 
 
-    //     if (EO) { 
-    //         EO.returnValue = myMessage; 
-    //     } 
-
-    //     return myMessage; 
-    // }; 
-
-
-
-            function clickSoundInit() {
+    function clickSoundInit() {
         clickAudio.play(); // запускаем звук
         clickAudio.pause(); // и сразу останавливаем
     }
@@ -618,6 +607,15 @@
     function clickSound() {
         clickAudio.currentTime=0; // в секундах
         clickAudio.play();
+    }
+
+    function vibro(longFlag) {
+        if ( navigator.vibrate ) { // есть поддержка Vibration API?
+            if ( !longFlag )
+                window.navigator.vibrate(100); // вибрация 100мс
+            else
+                window.navigator.vibrate([100,50,100,50,100]); // вибрация 3 раза по 100мс с паузами 50мс
+            }
     }
 
 
