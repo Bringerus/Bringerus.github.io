@@ -12,7 +12,9 @@ function Pipe(){
 
     this.hBot = (height - this.bottom);
 
-    this.speed = 2.4;
+    // this.speed = 5;
+
+    this.speed = 3.4;
 
     this.currPos = 0;
 
@@ -32,6 +34,7 @@ function Pipe(){
     }
 
     this.update = function(){
+        // this.x -= this.speed;
         this.currPos -= this.speed;
         console.log();
 

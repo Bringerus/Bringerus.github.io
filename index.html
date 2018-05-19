@@ -16,7 +16,6 @@
 </head>
 
 <body>
-
     <div id="mainField">
         <div id="UI" class="mainField_UI">
             <h3 id="playerName"></h3>
@@ -36,7 +35,7 @@
 
         <div id="UIRestart" class="mainField_UI">
             <button id="restartButton">Переиграть</button>
-            <button id="recordButtonRestart">Таблица рекордов</button>
+            <button id="mainMenuButt">Главное Меню</button>
         </div>
 
         <div id="UISetting" class="mainField_UI">
@@ -59,11 +58,27 @@
         <div id="fps">0</div>
     </div>
 
+    <!-- <audio  autoplay="autoplay">
+        <source src="bgmenu.mp3" />     
+    </audio> -->
+
+    <!-- <audio id="bgMusic" loop> 
+        <source src="Music.wav" />  
+    </audio> -->
+
  
 
     <script>
 
         "use sctrict"
+
+        window.addEventListener("beforeunload", function (EO) {
+            var confirmationMessage = "\o/";
+
+            (EO || window.event).returnValue = confirmationMessage; 
+            return confirmationMessage;                            
+        });
+
 
         var RAF =
             // находим, какой метод доступен
@@ -107,6 +122,8 @@
         var pipeDiv = mainField.getElementsByClassName("pipe");
         var pipeDivBot = mainField.getElementsByClassName("pipeBot");
         var scoreDiv = mainField.getElementsByClassName("score")
+        var bgDiv = mainField.getElementsByClassName("bgg");
+        var bgMusic = document.getElementById("bgMusic")
 
         var nameInput = document.getElementById("nameInput")
         var playerNameHeading = document.getElementById("playerName")
@@ -114,14 +131,12 @@
         var backButton =document.getElementById("backButton")
         var settingButt = document.getElementById("settingButton")
         var settingBackButt = document.getElementById("settingBackButt")
-
         var ezDiffButt = document.getElementById("ezDiffButt")
         var normDiffButt = document.getElementById("normDiffButt")
         var hardDiffButt = document.getElementById("hardDiffButt")
         var backButtonDiff = document.getElementById("backButtonDiff");
         var recordButtonRestart = document.getElementById("recordButtonRestart")
-
-        var bgDiv = mainField.getElementsByClassName("bgg");
+        var mainMenuButt = document.getElementById("mainMenuButt")
 
         var startButton = document.getElementById("startButton");
         var restartButton = document.getElementById("restartButton");
@@ -156,6 +171,9 @@
         var width = mainField.offsetWidth
         var vMin = mainFieldNew.vMin();
 
+        var clickAudio = new Audio("hit.wav");
+        var bgAudio = new Audio("Music.wav");
+
         var pipenew = new Pipe();
         var bird = new Bird();
         var bgNew = new Bg();
@@ -168,6 +186,18 @@
         var uiRecordBoard = new UI();
         var uiSettingsNew = new UI();
         var uiDiffBoard = new UI();
+
+        var imgSetting = new Image();
+        imgSetting.src = "bgstart1.jpg";
+        
+
+        var coofWHImage = 0;
+
+        window.onload = function(){
+            coofWHImage = imgSetting.width/imgSetting.height;
+            console.log(coofWHImage)
+            return coofWHImage;
+        }
 
         var uiAnimSpeed = (130+50)/60;
         var gameIsStarted = false;
@@ -192,30 +222,30 @@
             [ezDiffButt,startEzGame],
             [hardDiffButt,startHardGame],
             [settingBackButt,goBackToMenuSet],
-            [recordButtonRestart,showRecordBoardRestart]
+            [mainMenuButt,showMainMenu]
             ];
         
         (function setupUI(){
+            // bgAudio.play();
             uiNew.setCurrentObj(ui);
             uiDiffBoard.setCurrentObj(uiDiff);
             uiSettingsNew.setCurrentObj(uiSetting);
             uiPlayer.setCurrentObj(uiPlayerName);
             uiRecordBoard.setCurrentObj(uiRecords);
             newNewUi.setCurrentObj(uiRestart); // Restart !!!!    
-
-            addClicEventListner(clickEventsList); 
         })();
 
         (function startMainMenu(){
+            addClicEventListner(clickEventsList); 
             uiNew.goTo(-50, (130+50)/60 );
+            RAF(gameMainMenuUI)
         })();
 
-      
-        RAF(gameMainMenuUI)
 
         function gameMenuSetDifficulty(){
             uiNew.goTo(-230, uiAnimSpeed);
             uiDiffBoard.goTo(-50, uiAnimSpeed);
+            console.log("я сработала")
         }
 
         function goBackToMenuDiff(){
@@ -235,12 +265,18 @@
 
          function goBackToMenuSet(){
             uiNew.goTo(-50, uiAnimSpeed);
-            uiSettingsNew.goTo(130, uiAnimSpeed)
+            uiSettingsNew.goTo(130, uiAnimSpeed);
         }
 
         function showRecordBoard(){
             uiNew.goTo(-230, uiAnimSpeed);
             uiRecordBoard.goTo(-50, uiAnimSpeed)
+        }
+
+        function showMainMenu(){
+            uiNew.goTo(-50, uiAnimSpeed)
+            newNewUi.goTo(-230, uiAnimSpeed)
+            uiDiffBoard.currentObj.style.display="";
         }
 
         function showRecordBoardRestart(){ // СДЕЛАТЬ КНОПКУ РЕСТАРТА РЕКОРДОВ
@@ -258,10 +294,20 @@
             newNewUi.goTo(-50, uiAnimSpeed);
         }
 
+        var counter = 0;
+
         function startEzGame(){
-            // uiDiffBoard.goTo(-230, uiAnimSpeed);
+
+            bgAudio.play();
+            uiDiffBoard.goTo(-230, uiAnimSpeed);
             uiDiffBoard.currentObj.style.display="none"; // Временно
-            gameStart();
+
+            if(counter ==0){
+            counter ++;
+            gameStart();}
+            else {
+                gameRestart();
+            }
             
         }
 
@@ -271,7 +317,7 @@
         }
 
         function gameMainMenuUI(){
-
+            // console.log("я работая")
             uiNew.update();
             newNewUi.update(); // рестарт
             uiDiffBoard.update();
@@ -285,7 +331,12 @@
         
         function gameStart(){ // СТАРТ ИГРЫ
 
+            mainField.style.backgroundImage = "none";
+            uiDiffBoard.update();
+
             console.log(bgNew)
+
+            // uiDiff.update();
 
             pipenew = new Pipe();
 
@@ -296,11 +347,6 @@
             mainField.appendChild(score.createDiv("score"));
 
             var ostatokForBg;
-
-            bgDiv[0].onload = function(){
-                ostatokForBg = bgDiv[0].naturalWidth;
-                // return ostatokForBg;
-        }
 
             console.log(ostatokForBg)
 
@@ -329,6 +375,8 @@
 
             frame++;
 
+            // clickSoundInit();
+
             document.getElementsByClassName("score")[0].innerHTML = Math.floor(score.total);
             score.update();
              
@@ -349,21 +397,15 @@
                     birdFrameNow ++;
                 }
             }
-           
-            // if(uiNew.currentPos<=-50){
-            //     console.log(uiNew.speed)
-            //     uiNew.CurrentObj = -50;
-            //     uiNew.speed = 0;
-            //     startButton.addEventListener("click",gameStart,false);
-            // }
 
             uiNew.update();
 
             for (var i = bgArr.length - 1; i >= 0; i--) {
 
+                bgArr[i].x = getElementPos(bgDiv[i]).left
                 bgArr[i].update();
 
-                bgDiv[i].style.left = bgArr[i].x +"px"
+                bgDiv[i].style.transform ="translateZ(0) translateX(" + bgArr[i].currPos + "%)";
 
                 if (bgArr[0].x <= - bgArr[0].w) { // убираем фоновый див
                     bgArr.splice(i, 1)
@@ -371,31 +413,35 @@
                 }
             }
 
-            if (bgArr[0].x <= 0 && bgArr.length<=1) { // добавляем фоновый див
-                bgArr.push(new Bg());
-                bgNew.speed = vMin/280;
-                mainField.appendChild(bgArr[bgArr.length - 1].createImg("bgg"));
-                console.log("Created")
-            }
-
+                if (bgArr[0].x <= 0 && bgArr.length<=1) { // добавляем фоновый див
+                    bgArr.push(new Bg());
+                    bgNew.speed = vMin/280;
+                    mainField.appendChild(bgArr[bgArr.length - 1].createImg("bgg"));
+                    console.log("Created")
+                }
 
             for (var i = pipes.length - 1; i >= 0; i--) {
 
                 pipes[i].x = getElementPos(pipeDiv[i]).left
                 pipes[i].update();
 
+                // pipeDiv[i].style.left = pipes[i].x + "px"; // animation 
+                // pipeDivBot[i].style.left = pipes[i].x + "px";
 
-                pipeDiv[i].style.transform ="translateX(" + pipes[i].currPos + "%)"; // animation 
-                pipeDivBot[i].style.transform ="translateX(" + pipes[i].currPos + "%)";
+                pipeDiv[i].style.transform ="translateZ(0) translateX(" + pipes[i].currPos + "%)"; // animation 
+                pipeDivBot[i].style.transform ="translateZ(0) translateX(" + pipes[i].currPos + "%)";
 
                 if (pipes[i].hits(bird)) {
-
+                    bgAudio.pause();
+                    bgAudio.currentTime=0
+                    clickSound();
                     score.tick = 0;
                     score.update();
                     frame = 0;                    
 
                     removeEventListener("click", keyPressed, false);
                     removeEventListener("touchstart", keyPressed, false);
+                   
     
                     for (var j = 0; j <= pipes.length - 1; j++) {
                         pipes[j].speed = 0
@@ -446,9 +492,7 @@
 
         function keyPressed(EO) {
             EO = EO || window.event;
-
                 bird.up();
-
         }
 
         function randomDiap(n, m) {
@@ -456,7 +500,7 @@
         }
         
         function gameRestart(){
-
+            bgAudio.play();
             uiRestart.style.transition = "0.1s"
             newNewUi.currentPos = newNewUi.currentPosMax
 
@@ -548,10 +592,34 @@
         function getElementPos(elem) {
             var bbox=elem.getBoundingClientRect();
             return {
-        left: bbox.left+window.pageXOffset,
-        top: bbox.top+window.pageYOffset
-    };
-}
+                left: bbox.left+window.pageXOffset,
+                top: bbox.top+window.pageYOffset
+            };
+        }
+
+    // window.onbeforeunload = function (EO) { 
+    //     var EO = EO || window.event; 
+    //     var myMessage= "Вы действительно хотите покинуть страницу, не сохранив данные?"; 
+
+    //     if (EO) { 
+    //         EO.returnValue = myMessage; 
+    //     } 
+
+    //     return myMessage; 
+    // }; 
+
+
+
+            function clickSoundInit() {
+        clickAudio.play(); // запускаем звук
+        clickAudio.pause(); // и сразу останавливаем
+    }
+
+    function clickSound() {
+        clickAudio.currentTime=0; // в секундах
+        clickAudio.play();
+    }
+
 
     </script>
 </body>

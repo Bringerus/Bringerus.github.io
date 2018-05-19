@@ -4,16 +4,21 @@ function Bg (){
     this.h = document.documentElement.clientHeight;
 
     this.x = this.w
-    this.speed = vMin/280 ;
+    // this.speed = vMin/280 ;
 
-    this.bgImg = "bg1.jpg" 
+    this.speed = 1;
+    this.currentPos = 0;
+
+    this.bgImg = "bg.png" 
 
     this.setPositionX = function(n){
          this.x = n 
+
     }
 
     this.update = function(){
-        this.x -= this.speed 
+        // this.x -= this.speed 
+        this.currentPos -= this.speed 
     }
 
     this.createImg = function(className){

@@ -14,9 +14,9 @@ h3{
 }
 
 #mainField{
+    background-image: url("bgmenu.jpg");
     position: relative;
-    /* background: url(bg.jpg); */
-    background-size: 150%;
+    background-size: auto 100%;
     overflow: hidden;
     box-shadow: inset 1px 1px 20vmin black;
 }
@@ -37,7 +37,6 @@ h3{
 
 .mainField_UI > h3{
     text-align: center;
-
 }
 
 .mainField_UI >button:not(:first-child){
@@ -45,27 +44,29 @@ h3{
 }
 
 .mainField_UI >button{
-    color:white;
-    text-shadow: 1px 1px 2px black;
-    background-color: rgb(54, 79, 190);
+    background-color: rgba(255,255,255,1);
+    padding: 1vmin;
     font-size: 3.6vmin;
-    padding: 0.5vmin;
-    font-weight: bold;
+    font-family: monospace;
+    box-shadow: 0px 5px 10px rgba(0, 0, 255, 0.253);
+    transition: all .5s;
+    cursor: pointer;
+    border-radius: 10px;
+    border-bottom: 4px solid grey;
     width: 100%;
     min-height: 50px;
-    border:  0.3vmin solid black;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: ease 0.5s;
 }
 
-.mainField_UI >button:hover{
-    transform: scale(1.2)
+.mainField_UI > button:hover{
+    box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%));
+    transform: scale(1.23);
 }
 
-.mainField_UI >button:focus{
-    background-color: red;
-}
+.mainField_UI >button:active {
+    box-shadow: 0px 4px 8px rgba(darken(dodgerblue, 30%));
+    transform: scale(1.09);
+    background-color: rgba(255,0,0,1);
+} 
 
 #fps{
     font-size: 3.6vmin;
@@ -80,30 +81,27 @@ h3{
     background-color: rgba(0, 0, 0, 0.0);
     background-image: url("bird.png");
     background-size: 500%;
-    /* border: 1px solid black; */
     z-index: 2;
 }
 
 .pipe, .pipeBot{
-    background:url(tex.jpg);
+    /* background:url("tex.png"); */
+    background-color: red;
 }
 
 .score{
+    font-size: 3vmin;
     background-color: purple;
 }
 
-
-/* портретная ориентация */
-
 /* @media screen and (orientation:portrait) {
-    body{
-        background-color: red;
+    #mainField{
+        background-size: auto 100%;
     }
 }
 
-
 @media screen and (orientation:landscape) {
-    body{
-        background-color: blue;
+    #mainField{
+        background-size: 100% auto;
     }
 } */
