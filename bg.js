@@ -3,11 +3,11 @@ function Bg (){
     this.w =  document.documentElement.clientWidth;
     this.h = document.documentElement.clientHeight;
 
-    this.x = this.w
+    this.x = width
     // this.speed = vMin/280 ;
 
-    this.speed = 0.3;
-    this.currPos = 0;
+    this.speed = 0.4;
+    this.currPos = 75;
 
     this.bgImg = "bg.png" 
 

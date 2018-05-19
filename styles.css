@@ -2,10 +2,21 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-size: 3vmin
+}
+
+li{
+    line-height: 4vmin;
+    list-style-type:none;
 }
 
 h3{
+    font-size: 3vmin;
     text-align: center;
+}
+
+h3, li, #UIPlayerName > label{
+    color:white;
 }
 
 :active, :hover, :focus {
@@ -14,7 +25,7 @@ h3{
 }
 
 #mainField{
-    background-image: url("bgmenu.jpg");
+    background-image: url("bgpat.jpg");
     position: relative;
     background-size: auto 100%;
     overflow: hidden;
@@ -32,12 +43,9 @@ h3{
     width: 40%;
     padding: 5%;
     z-index: 2;
-    background-color: rgba(129, 182, 231, 0.408);
+    background-color: rgba(37, 38, 39, 0.908);
 }
 
-.mainField_UI > h3{
-    text-align: center;
-}
 
 .mainField_UI >button:not(:first-child){
     margin-top: 7.5%;
@@ -68,6 +76,29 @@ h3{
     background-color: rgba(255,0,0,1);
 } 
 
+#UIPlayerName {
+    text-align: center;
+}
+
+#UIPlayerName > input , label{
+    width: 85%;
+    text-align: center;
+    display: inline-block;
+}
+
+#UIPlayerName > input {
+    margin-top: 5%;
+    padding: 1%;
+}
+
+#UIPlayerName > label {
+    font-weight: bold;
+}
+
+#UIRecords > div{
+    text-align: center;
+}
+
 #fps{
     font-size: 3.6vmin;
     min-width: 80px;
@@ -78,31 +109,22 @@ h3{
 }
 
 .bird{
-    background-color: rgba(0, 0, 0, 0.0);
     background-image: url("bird.png");
     background-size: 500%;
     z-index: 2;
 }
 
 .pipe, .pipeBot{
-    background:url("tex.png");
+    background:url("tex.jpg");
     /* background-color: rgba(0, 255, 100); */
     opacity: 0.90;
 }
 
 .score{
-    font-size: 3vmin;
-    background-color: purple;
+    position: absolute;
+    display: inline-block;
+    font-size: 4.5vmin;
+    background-color: rgba(37, 38, 39, 0.908);
+    color:white;
+    padding: 1vmin 4vmin;
 }
-
-/* @media screen and (orientation:portrait) {
-    #mainField{
-        background-size: auto 100%;
-    }
-}
-
-@media screen and (orientation:landscape) {
-    #mainField{
-        background-size: 100% auto;
-    }
-} */
