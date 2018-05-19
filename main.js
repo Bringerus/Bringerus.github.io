@@ -495,7 +495,7 @@
                     mainField.removeChild(pipeDivBot[0]);
                 }
 
-                for (var i = 0; i <= bgArrayLength; i++){
+                for (var i = 0; i < bgArrayLength; i++){
                     mainField.removeChild(bgDiv[0]);
                 }
 
