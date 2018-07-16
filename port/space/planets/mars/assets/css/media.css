@@ -1,0 +1,178 @@
+@media screen and (min-width:2000px) {
+    html {
+        font-size: 0.78vw;
+        background: green;
+    }
+    #wrapper {
+        width: 72%
+    }
+}
+
+
+@media screen and (min-width:1440px) and (max-width:2000px) {
+    html {
+        background: yellow;
+    }
+    #wrapper {
+        width: 83.7%
+    }
+    /*form*/
+    .container-form {
+        min-height: 59vw;
+    }
+
+    .form-table {
+        min-height: 36vw;
+    }
+}
+
+.place-for-mail {
+    height: 16rem;
+}
+
+@media screen and (min-width:960px) and (max-width:1440px) {
+    html {
+        background: blue;
+    }
+    #wrapper {
+        width: 84%
+    }
+    /*form*/
+    .container-form {
+        min-height: 52vw;
+    }
+
+    .form-table {
+        min-height: 32vw;
+    }
+}
+
+
+@media screen and (min-width:768px) and (max-width:979px) {
+    html {
+        font-size: 1.1vw;
+        background: grey
+    }
+    #wrapper {
+        width: 90%
+    }
+
+
+    .container-form {
+
+        position: relative;
+
+        min-height: 68vw;
+    }
+
+    .form-table {
+        min-height: 43vw;
+    }
+}
+
+
+@media screen and (min-width:480px) and (max-width:768px) {
+
+    html {
+        font-size: 1.8vw;
+    }
+
+    #wrapper {
+        width: 94%
+    }
+
+    .logo {
+        position: relative;
+        width: 70vw;
+        left: 15vw;
+    }
+    .page__video-bg {
+        background: no-repeat url(../video/mars.jpg) 50% 50%/ auto 155%;
+        height: 43vw;
+    }
+
+    .video-bg__video-mars {
+        display: none;
+    }
+
+    .video-bg__title_font-style {
+        font-size: 2rem;
+    }
+
+
+
+    .navigation {
+
+        font-size: 1.6rem;
+    }
+
+    .navigation>ul>li:nth-child(2)>ul>li:nth-child(1) {
+        font-size: 1.4rem;
+    }
+
+
+    .container-form {
+        min-height: 58vw;
+    }
+
+    .form-table {
+        min-height: 67vw;
+    }
+}
+
+
+
+@media screen and (max-width:480px) {
+    html {
+        font-size: 2vw;
+    }
+
+    .logo {
+        position: relative;
+        width: 70vw;
+        left: 15vw;
+    }
+
+    .navigation {
+
+        font-size: 1.6rem;
+    }
+
+    .navigation>ul>li:nth-child(2)>ul>li:nth-child(1) {
+        font-size: 1.4rem;
+    }
+
+    #wrapper {
+        width: 97.5%
+    }
+
+
+    .page__video-bg {
+        height: 55vw;
+    }
+
+    .video-bg__title_font-style {
+        font-size: 2rem;
+    }
+
+
+    .page__video-bg {
+        background: no-repeat url(../video/mars.jpg) 50% 50%/ auto 125%;
+    }
+
+    .video-bg__video-mars {
+        display: none;
+    }
+
+
+    .container-form {
+        clear: both;
+        position: relative;
+        width: 100%;
+        min-height: 88vw;
+    }
+
+    .form-table {
+        min-height: 76vw;
+    }
+}

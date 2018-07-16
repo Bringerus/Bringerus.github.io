@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700)
+
+h1
+  font: 400 2.8rem 'pt sans',sans-serif
+  text-align: center
+
+nav
+  a
+    text-decoration: none
+  z-index: 600
+  height: 70px
+  position: fixed
+  width: 100%
+  > ul
+    position: relative
+    list-style: none
+    padding: 0 10em 0 0
+    margin: 0
+    float: right
+    > li
+      > ul
+        position: absolute
+        left: 0
+        padding: 0
+        margin: 0
+        list-style: none
+      &:hover > ul li a
+        opacity: 1
+        height: 50px
+        transition: all .3s linear
+        -o-transition: all .3s linear
+        -moz-transition: all .3s linear
+        -webkit-transition: all .3s linear
+      > ul a
+        display: block
+        color: #222
+        width: 150px
+        font: 700 14px 'pt sans',sans-serif
+        border-bottom: 1px solid #ddd
+        text-align: center
+        padding: 0 5px
+        height: 0
+        overflow: hidden
+        opacity: 0
+        transition: all .3s linear .2s
+        -o-transition: all .3s linear .2s
+        -moz-transition: all .3s linear .2s
+        -webkit-transition: all .3s linear .2s
+
+.menu_item
+  line-height: 70px
+
+.sub-menu_item
+  line-height: 50px
+
+nav > ul > li
+  float: left
+  position: relative
+  > a
+    padding: 0 20px
+    display: block
+    font: 400 15px 'PT Sans', sans-serif
+    text-transform: uppercase
+    text-decoration: none

@@ -1,0 +1,174 @@
+@media screen and (min-width:2000px) {
+    html {
+        font-size: 0.78vw;
+    }
+    #wrapper {
+        width: 72%
+    }
+
+}
+
+
+@media screen and (min-width:1440px) and (max-width:2000px) {
+
+    #wrapper {
+        width: 83.7%
+    }
+    /*form*/
+    .container-form {
+        min-height: 59vw;
+    }
+
+    .form-table {
+        min-height: 36vw;
+    }
+
+
+    .place-for-mail {
+        height: 16rem;
+    }
+}
+
+@media screen and (min-width:960px) and (max-width:1440px) {
+
+    #wrapper {
+        width: 84%
+    }
+    /*form*/
+    .container-form {
+        min-height: 52vw;
+    }
+
+    .form-table {
+        min-height: 32vw;
+    }
+}
+
+
+@media screen and (min-width:768px) and (max-width:979px) {
+    html {
+        font-size: 1.1vw;
+    }
+    #wrapper {
+        width: 90%
+    }
+
+
+    .container-form {
+        position: relative;
+        min-height: 68vw;
+    }
+
+    .form-table {
+        min-height: 43vw;
+    }
+}
+
+
+@media screen and (min-width:640px) and (max-width:768px) {
+    #wrapper {
+        width: 95%
+    }
+
+
+    .container-form {
+        width: 100%;
+        min-height: 65vw;
+    }
+
+    .appendix__img-2 {
+        width: 80%;
+    }
+
+
+    .form-table {
+        min-height: 40vw;
+    }
+}
+
+
+
+@media screen and (min-width:480px) and (max-width:640px) {
+
+    #wrapper {
+        width: 97.5%
+    }
+
+    .logo {
+        position: relative;
+        width: 70vw;
+        left: 15vw;
+    }
+
+
+    .navigation {
+        font-size: 1.4rem;
+    }
+
+    .navigation>ul>li:nth-child(2)>ul>li:nth-child(1) {
+        font-size: 1.6rem;
+    }
+
+    .appendix__img-2 {
+        width: 80%;
+    }
+
+    .container-form {
+        width: 100%;
+        min-height: 65vw;
+    }
+
+    .form-table {
+        min-height: 37vw;
+    }
+}
+
+
+@media screen and (max-width:480px) {
+    html {
+        font-size: 2vw;
+    }
+
+    .logo {
+        position: relative;
+        width: 70vw;
+        left: 15vw;
+    }
+
+    .navigation {
+
+        font-size: 1.1rem;
+    }
+
+    .navigation>ul>li:nth-child(2)>ul>li:nth-child(1) {
+        font-size: 1.1rem;
+    }
+
+
+    #wrapper {
+        width: 97.5%
+    }
+
+
+
+    .appendix__img-1 {
+        width: 100%;
+    }
+
+    .art__appendix-1 {
+        padding-left: 10%;
+        width: 80%;
+        min-height: 55vw;
+    }
+
+    .container-form {
+        clear: both;
+        position: relative;
+        width: 100%;
+        min-height: 98vw;
+    }
+
+    .form-table {
+        min-height: 76vw;
+    }
+}

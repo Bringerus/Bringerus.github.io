@@ -1,0 +1,507 @@
+@media screen and (min-width:2000px) {
+    html {
+        font-size: 0.78vw;
+    }
+    #wrapper {
+        width: 72%
+    }
+    .renaissance-scientist__img {
+        width: 22.3vw;
+    }
+    .modern-scientist__img {
+        width: 33.5vw;
+    }
+    
+     .place-for-mail {
+    height: 15rem;}
+}
+
+
+@media screen and (min-width:1440px) and (max-width:2000px) {
+
+    #wrapper {
+        width: 83.7%
+    }
+    /*form*/
+    .container-form {
+        min-height: 59vw;
+    }
+
+    .form-table {
+        min-height: 36vw;
+    }
+    
+     .place-for-mail {
+    height: 17rem;}
+}
+
+
+@media screen and (min-width:980px) and (max-width:1440px) {
+
+    #wrapper {
+        width: 84%
+    }
+    /*form*/
+    .container-form {
+        min-height: 42vw;
+    }
+
+    .form-table {
+        min-height: 42vw;
+    }
+}
+
+
+@media screen and (min-width:768px) and (max-width:979px) {
+    html {
+        font-size: 1.1vw;
+    }
+    #wrapper {
+        width: 90%
+    }
+
+
+    .renaissance-scientist__img {
+        width: 28vw;
+    }
+    
+    .modern-scientist__img {
+        width: 42.2vw;
+    }
+
+    .planets__img_mars {
+        background: no-repeat url(../img/mars.jpg) 70% 50%/ auto 165%;
+    }
+
+    .planets__img_mars {
+        background: no-repeat url(../img/mars.jpg) 50% 50%/ auto 145%;
+    }
+
+
+    .container-form {
+        position: relative;
+        min-height: 47vw;
+    }
+
+    .form-table {
+        min-height: 43vw;
+    }
+    
+     .place-for-mail {
+    height: 14rem;}
+}
+
+
+
+@media screen and (min-width:640px) and (max-width:768px) {
+    html {
+        font-size: 1.3vw;
+    }
+
+    #wrapper {
+        width: 95%
+    }
+
+    .logo {
+        position: relative;
+        width: 70vw;
+        left: 15vw;
+    }
+
+    .navigation {
+
+        font-size: 1.6rem;
+    }
+
+    .navigation>ul>li:nth-child(2)>ul>li:nth-child(1) {
+        font-size: 1.4rem;
+    }
+
+    .intro-1 {
+        font-size: 4rem;
+    }
+
+
+    .intro-2 {
+        font-size: 2.8rem;
+        top: 67%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .intro-3 {
+        font-size: 3rem;
+        top: 67%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .switch label {
+
+        width: 3.1vw;
+        height: 3.1vw;
+        margin: 0 1vw;
+    }
+
+
+    .renaissance-scientist__img {
+        width: 29.7vw;
+    }
+    .modern-scientist__img {
+        width: 44.7vw;
+    }
+
+    .science:hover>div:after {
+        left: 90%;
+    }
+
+    .planets__img_mars {
+        background-size: auto 152%;
+    }
+
+    .container-form {
+        min-height: 58vw;
+    }
+
+    .form-table {
+        min-height: 50vw;
+    }
+    
+     .place-for-mail {
+    height: 14rem;}
+}
+
+@media screen and (min-width:480px) and (max-width:640px) {
+
+    html {
+        font-size: 1.8vw;
+    }
+
+    #wrapper {
+        width: 97.5%
+    }
+
+    .logo {
+        position: relative;
+        width: 70vw;
+        left: 15vw;
+    }
+
+    .navigation {
+
+        font-size: 1.6rem;
+    }
+
+    .navigation>ul>li:nth-child(2)>ul>li:nth-child(1) {
+        font-size: 1.4rem;
+    }
+
+    .intro-1 {
+        font-size: 4rem;
+    }
+
+
+    .intro-2 {
+        font-size: 1.8rem;
+        top: 67%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .intro-3 {
+        font-size: 2rem;
+        top: 67%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .switch label {
+        width: 3.1vw;
+        height: 3.1vw;
+        margin: 0 1vw;
+    }
+
+    .renaissance-scientist__img {
+        width: 30.5vw;
+    }
+    .modern-scientist__img {
+        width: 45.8vw;
+    }
+
+    .planets__img_mars {
+        background-size: auto 157%;
+    }
+
+    .universe-birth {
+        width: 75%;
+        height: 45vw;
+        clear: both;
+        left: 12.5%;
+        margin-bottom: 4vw
+    }
+
+    .science {
+        width: 75%;
+        height: 45vw;
+        clear: both;
+        left: 12.5%;
+    }
+
+    .science>div:after {
+        height: 25vmin;
+        width: 25vmin;
+    }
+
+
+    .universe-birth__text:after {
+        height: 23vmin;
+        width: 23vmin;
+    }
+
+    .elem__date {
+        width: 70%;
+    }
+
+    .mail-box {
+        margin-top: 16vw;
+    }
+
+    .container-form {
+        clear: both;
+        position: relative;
+        width: 100%;
+        min-height: 62vw;
+    }
+
+    .form-table {
+        min-height: 66vw;
+    }
+    
+     .place-for-mail {
+    height: 14rem;}
+}
+
+
+@media screen and (max-width:480px) {
+    html {
+        font-size: 2.17vw;
+    }
+    /*history*/
+    .logo {
+        position: relative;
+        width: 70vw;
+        left: 15vw;
+    }
+
+    .navigation {
+
+        font-size: 1.6rem;
+    }
+
+    .navigation>ul>li:nth-child(2)>ul>li:nth-child(1) {
+        font-size: 1.4rem;
+    }
+
+    .history {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    #wrapper {
+        width: 97.5%
+    }
+
+    .intro-1 {
+        font-size: 4rem;
+    }
+
+
+    .intro-2 {
+        font-size: 1.8rem;
+        top: 67%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .intro-3 {
+        font-size: 2rem;
+        top: 67%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .switch label {
+
+        width: 3.1vw;
+        height: 3.1vw;
+        margin: 0 1vw;
+    }
+
+    .universe-birth {
+        width: 75%;
+        height: 45vw;
+        clear: both;
+        left: 12.5%;
+        margin-bottom: 4vw
+    }
+
+
+    .science {
+        width: 75%;
+        height: 45vw;
+        clear: both;
+        left: 12.5%;
+    }
+
+    .science>div:after {
+
+        height: 25vmin;
+        width: 25vmin;
+    }
+
+
+    .universe-birth__text:after {
+        height: 23vmin;
+        width: 23vmin;
+    }
+
+    /*scientists*/
+    .renaissance-scientist:nth-child(n):not(:nth-child(4)) {
+        position: relative;
+        width: 45.3%;
+        min-height: 55vw;
+        margin-bottom: 3vw;
+        margin-right: 3%;
+        left: 3%;
+    }
+
+    .renaissance-scientist:nth-child(4) {
+        position: relative;
+        width: 60%;
+        left: 20%;
+        min-height: 55vw;
+        margin-bottom: 3vw;
+    }
+
+    .renaissance-scientist__img {
+        width: 43.65vw;
+    }
+
+    .renaissance-scientist__last-img {
+        width: 57.8vw;
+    }
+
+    .renaissance-scientist_hover:nth-child(2):hover {
+        -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+
+    .renaissance-scientist_hover:nth-child(3):hover {
+        -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    .renaissance-scientist_hover:nth-child(4):hover {
+        -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+
+
+    .modern-scientist_hover:nth-child(2):hover {
+        -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+
+    .modern-scientist_hover:nth-child(3):hover {
+        -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+
+
+    .scientists__modern_elem {
+        position: relative;
+        width: 45.7%;
+        left: 3%;
+    }
+
+    .modern-scientist_horizontal-space-between:not(:nth-child(3)) {
+        margin-right: 3%;
+    }
+
+    .modern-scientist__img {
+        width: 44vw;
+    }
+    /*space objects*/
+    .planets {
+        width: 100%;
+        margin-bottom: 2vw;
+    }
+
+    .planets__img {
+        height: 42.2vw;
+    }
+
+    .planets__img_mars {
+        background: no-repeat url(../img/mars.jpg) 50% 50%/ auto 180%;
+    }
+
+    .planets__img_mars {
+        background-size: auto 157%;
+    }
+
+    .planets__elem:nth-child(3):hover>div {
+        background-size: auto 180%;
+    }
+    /*news*/
+    .space-news {
+        width: 100%;
+    }
+
+    .space-news__elem {
+        position: relative;
+        width: 85%;
+        left: 7.5%;
+    }
+
+    .elem__date {
+        position: relative;
+        border-radius: 0 0 5vw 5vw;
+        text-align: center;
+        left: 25%;
+        margin-bottom: 2vw;
+    }
+    /*form*/
+    .container-form {
+        clear: both;
+        position: relative;
+        width: 100%;
+        min-height: 88vw;
+    }
+
+    .form-table {
+        min-height: 76vw;
+    }
+    
+    .place-for-mail {
+    height: 14rem;}
+}

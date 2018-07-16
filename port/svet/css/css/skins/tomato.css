@@ -1,0 +1,63 @@
+body {
+  color: #222;
+  letter-spacing: 1px; }
+
+a {
+  color: #FAFAFA; }
+
+nav {
+  background-color: #222; }
+
+.menu_item:hover,
+.sub-menu_item:hover {
+  color: #e4352a; }
+
+.sub-menu_item {
+  color: #888;
+  background-color: #FAFAFA; }
+
+.top_text > h1 {
+  letter-spacing: 4px;
+  color: #FAFAFA;
+  background: linear-gradient(to left, transparent 10%, rgba(0, 0, 0, 0.42), transparent); }
+
+section > h3 {
+  padding-top: 3rem;
+  letter-spacing: 4px;
+  border-bottom: 4px solid #e4352a; }
+
+.about-us {
+  background-color: #FAFAFA; }
+
+.poducts {
+  background-color: #222; }
+
+.product_item p {
+  background-color: rgba(34, 34, 34, 0.4); }
+
+.advantages_item:nth-child(2n) {
+  border-left: 2px solid #e4352a; }
+
+.advantages_item:nth-child(2n-1) {
+  border-right: 2px solid #e4352a; }
+
+form span {
+  color: #e4352a; }
+
+.mail-box {
+  background: url("../../img/wooden.jpg"); }
+  .mail-box label {
+    color: #FAFAFA; }
+
+.main_footer {
+  color: #FAFAFA;
+  background-color: #222; }
+
+.btn {
+  background-color: #222;
+  color: #FAFAFA; }
+  .btn:hover {
+    background-color: #FAFAFA;
+    color: #222; }
+
+/*# sourceMappingURL=tomato.css.map */
