@@ -1,0 +1,163 @@
+@import url(https://fonts.googleapis.com/css?family=Passion+One);*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 100%;
+  font-family: 'Passion One', cursive;
+}
+
+/* body{
+  background-color: black;
+} */
+
+.STestComponent {
+  color: red;
+  padding: .1px;
+}
+
+.STestComponent .Container{
+  background-color: white;
+}
+
+.STestComponent .Container .Wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.Blocks{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.Block{
+    display: block;
+    color:black;
+    padding-bottom: 10px;
+    overflow: hidden;
+    margin-top: 4vmin;
+    width: 47%;
+    font-size: 1.7rem;
+    padding-bottom: 5vh;
+    border-bottom: 1px solid black
+}
+
+.Block > .Title{
+    text-align: center;
+    padding: 0.6rem;
+   
+    font-size: 2rem;
+}
+.Block > .Title > span{
+    border-bottom: 0.1rem solid black;
+}
+
+
+.Block > .Img > a > img{
+    position: relative;
+    width: 95%;
+    margin: 1rem 0;
+    left: 2.5%;
+}
+
+.Block > .Tec,  .Des{
+    font-size: 1rem;
+    padding:0 2%;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 600px) {
+    .Block {
+        width: 90%;
+    }
+  }
+.PortNav{
+    display: block;
+    position: fixed;
+    color: white;
+    text-align: right;
+    font-size: 2rem;
+    background-color: grey;
+    width: 100%;
+    z-index: 1;
+}
+
+.PortNav > ul{
+    display: inline-block;
+}
+
+.PortNav > ul > li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px 1rem 10px 1rem;
+    position: relative;
+}  
+
+.PortNav > ul > li:hover:after{
+    content:"";
+    width: 100%;
+    height: 0.5rem;
+    display: block;
+    position: absolute;
+    background-color: black;
+    left: 0;
+    bottom: 0px;
+}
+
+.PortNav > ul > li:hover{
+    color: black;
+    cursor: pointer;
+    position: relative;
+}
+
+@media screen and (max-width: 600px) {
+
+    .PortNav{
+        position: relative;
+    }
+
+    .PortNav > ul > li {
+        text-align: center;
+        width: 90%;
+    }
+    .PortNav > ul > li:hover:after{
+        background-color: grey;
+    }
+
+}.AboutMe{
+    width: 100%;
+    height: 100vh;
+}
+.AboutMe > div > div{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-image: url("https://image.ibb.co/m3Lm1y/technology_785742_1280_min.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.AboutMe > div {
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background-color: rgba(46, 54, 49, 0.727);
+}
+
+
+@media screen and (max-width: 600px) {
+    .Block {
+        width: 90%;
+    }
+
+    .AboutMe > div > div{
+        position: relative;
+    }
+  }
+
+/*# sourceMappingURL=main.bundle.fbf92f8a3e93a0102ad0.css.map*/
