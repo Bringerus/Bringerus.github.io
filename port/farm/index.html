@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,600&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section class="Section-Intro">
+
+        <div class="Section-Intro-Container">
+            
+            <header class="Header" id="header">
+                    <div class="Icon">
+                        
+                    </div>
+            
+                    <nav class="MainMenu-Container white-letters">
+                        <ul class="MainMenu ">
+                            <li class="MainMenu_Item"><a href="#">Главная</a></li>
+                            <li class="MainMenu_Item"><a href="pages/AboutUs/index.html">О Нас</a></li>
+                            <li class="MainMenu_Item"><a href="pages/Services/index.html">Услуги</a></li>
+                            <li class="MainMenu_Item"><a href="pages/Gallery/index.html">Галерея</a></li>
+                            <li class="MainMenu_Item"><a href="pages/Contacts/index.html">Контакты</a></li>
+                        </ul>
+                    </nav>
+            
+            </header>
+                <div class="Intro_Background">
+                <div class="Intro_Text white-letters">
+                    <h2>Get The Best For Repairs & Service</h2>
+                    <h3>Have All Our Services At Your Doorstep, 7 Days A Week, At Fair And Minimum Pricing</h3>
+                </div>
+                <div class="Intro_Button white-letters">Наши Услуги</div>
+                <div class="Advantages-Container wrapper">
+                    <div class="Avantages_Item">
+                        <img src="rzhav.jpg" alt="Ржавый Механизм">
+                        <h4>We Make It Easy</h4>
+                        <p class="Item_Text">Get a quote and book a service online 24/7. Our mechanics will come to home evenings.</p>
+                    </div>
+                    <div class="Avantages_Item">
+                        <img src="ferma.jpg" alt="Трактор">
+                        <h4>Fixed Upfront Pricing</h4>
+                        <p class="Item_Text">We offer guaranteed upfront pricing and savings up to 30% compared to repair shops.</p>
+                    </div>
+                    <div class="Avantages_Item">
+                        <img src="tractor.jpg" alt="Трактор">
+                        <h4>Happiness Guaranteed</h4>
+                        <p class="Item_Text">We only work with highly rated mechanics. All services are backed by our 12-month.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="Footer white-letters">
+        <div class="Footer-Container wrapper">
+            <div class="Footer-Container_Item">
+                ИП Карапетян Грант Суренович<br/>
+                УНП 291204592<br/>
+                Адрес базы: <br/>
+                г. Барановичи, Ул. Спокойная 13 
+            </div>
+
+            <div class="Footer-Container_Item">
+                Код банка: <br/>
+                REDJBY22, 
+                р/с BY63REDJ30131008326010000933 в ЗАО «РРБ-БАНК» в г.Минск 
+            </div>
+
+            <div class="Footer-Container_Item"> 
+                Email: <br/>
+                grant.karapetyan1967@gmail.com <br/>
+                Сотовый телефон(VEL): <br/>
+                +375 29 115-73-13 
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        var header = document.getElementById("header")
+        var li = header.getElementsByTagName("li")
+
+        window.onscroll = function() {
+            var scrolled = window.pageYOffset
+            if(scrolled > 0){
+                for (let i = 0; i < li.length; i++) {
+                     li[i].style.color = "black";
+                }
+                header.style.backgroundColor = "white"
+            }
+            else {
+                for (let i = 0; i < li.length; i++) {
+                     li[i].style.color = "white";
+                }
+                header.style.backgroundColor = ""
+            }
+        }
+    </script>
+</body>
+</html>

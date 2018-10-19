@@ -1,0 +1,18 @@
+.Section-Intro-Container{
+    position: relative;
+    background-image: linear-gradient(165deg, #00484c 37%, #f2295b 84%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 350px;
+    justify-content: center;
+}
+
+.MainMenu-Title{
+    font-size: 1.7em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-bottom: 0.1em solid white;
+    padding-bottom: 0.4em;
+}

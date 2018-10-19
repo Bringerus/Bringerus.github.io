@@ -1,0 +1,16 @@
+.Footer{
+    width: 100%;
+
+    font-size: 0.72em;
+    background-color: #092b2b;
+    padding: 30px 0;
+}
+
+.Footer-Container{
+    display: flex;
+}
+
+Footer-Container > Footer-Container_Item{
+   width: 30%;
+}
+
