@@ -1,0 +1,13 @@
+.TaskOne-Title {
+  padding: 10px 0 10px 0;
+  margin: 20px 0px 20px 0;
+  border-bottom: 3px solid #000;
+}
+
+.TaskOne-Add-Butt {
+  margin-top: 20px;
+}
+
+.TaskOne-List {
+  border-bottom: 1px solid #000;
+}
